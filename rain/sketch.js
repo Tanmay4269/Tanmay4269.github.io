@@ -30,7 +30,7 @@ function draw() {
 
 function spawn() {
   const pos = createVector(random(-width, width), 0);
-  const vel = createVector(1, 2);
+  const vel = createVector(random(0.9, 1.1), 2);
   vel.normalize();
 
   const speed = random(10, 16);

@@ -28,5 +28,7 @@ class Drop {
 
     update() {
         this.pos.add(this.vel);
+
+        this.vel.x += 0.1;
     }
 }
