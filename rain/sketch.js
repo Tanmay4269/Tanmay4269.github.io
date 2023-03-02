@@ -4,6 +4,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   background(239, 187, 255);
   frameRate(120);
