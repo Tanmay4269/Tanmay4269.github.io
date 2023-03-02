@@ -4,7 +4,8 @@ class Drop {
         this.vel = vel;
 
         // dist => min = 0; max = 10
-        this.len = map(dist, 0, 10, 35, 10);
+        //this.len = map(dist, 0, 10, 35, 10);
+        this.len = map(dist, 0, 10, 20, 5);
         this.color = lerpColor(color(105, 24, 131), color(239, 187, 255), map(dist, 0, 10, 0, 1));
         //this.color = lerpColor(color(105, 24, 131), color(190, 42, 236), map(dist, 0, 10, 0, 1));
         this.weight = map(dist, 0, 10, 5, 2);

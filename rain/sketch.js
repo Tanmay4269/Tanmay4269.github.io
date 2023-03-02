@@ -1,6 +1,7 @@
 drops = [];
 
 function setup() {
+  background(239, 187, 255);
   createCanvas(windowWidth, windowHeight);
 }
 
@@ -9,7 +10,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(239, 187, 255);
+  background(239, 187, 255, 100);
   frameRate(120);
 
   if (true) {
