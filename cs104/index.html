@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Minesweeper Cricket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Start menu -->
+  <div class="container">
+    <h1 class="title">Minesweeper Cricket</h1>
+
+    <div class="highScore">High Score: <span id="highScore">0</span></div>
+    <div class="options">
+      <label for="boardSize">Choose Board Size:</label>
+      <select id="boardSize">
+        <option value="6">6x6</option>
+        <option value="7">7x7</option>
+      </select>
+    </div>
+
+    <button id="startButton">Start Game</button>
+  </div>
+
+  <!-- Game -->
+  <div id="gameContainer" class="container hidden">
+    <div id="scoreDisplay" class="score-display">Score: <span id="score">0</span></div>
+    <div id="gameBoard"></div>
+    <button id="menuButton">Menu</button>
+  </div>
+
+  <!-- Restart -->
+  <div id="restartMenu" class="container hidden">
+    <h2>You lost</h2>
+    <div id="finalScore"></div>
+    <button id="restartButton">Back to Main Menu</button>
+  </div>
+
+  <!-- Win window -->
+  <div id="winMenu" class="hidden">
+    <h2>Congratulations you won!</h2>
+    <p>Your Score: <span id="winScore"></span></p>
+    <button id="winMenuButton">Main Menu</button>
+  </div>    
+
+  <script src="sketch.js"></script>
+</body>
+</html>
