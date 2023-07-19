@@ -1,0 +1,244 @@
+/* Importing fonts from the web */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap'); /* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'); /* Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap'); /* Lumanosimo */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@700&display=swap'); /* Tektur */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap'); /* Oswald */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* VT323 */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Pacifico */
+@font-face {
+    font-family: 'Cute Font'; /* Give a name to your font family */
+    src: url(cute_font.otf) format('opentype');
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative; /* Add this line to make sure absolute positioning works */
+    overflow: hidden;
+}
+
+
+#dev-mode {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#main-text-container {
+    text-align: center;
+    font-size: 42px;
+    user-select: none;
+}
+
+/* affirmation = "Strong" */  
+.aff-strong {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    background-color: black;
+    color: white;
+}
+
+/* affirmation = "Independent" */
+.aff-independent {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+}
+
+.aff-independent::before,
+.aff-independent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.aff-independent::before {
+    background: hsl(49 37% 94%);
+    animation: typewriter 1.5s
+        steps(11) 0.2s forwards;
+}
+
+.aff-independent::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter 1.5s
+        steps(11) 0.2s forwards,
+        blink 750ms steps(11) infinite;
+    }
+
+@keyframes typewriter {
+    to {
+      left: 100%;
+    }
+}
+  
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+/* affirmation = "Creative" */
+.aff-creative {
+    font-family: "Cairo";
+    text-align: center;
+    color: #FFF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    line-height: 2;
+    white-space: nowrap;
+    
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+}
+
+/* affirmation = "Playful" */
+.aff-playful {
+    font-family: 'Pacifico', sans-serif;
+    animation: bounce 1s infinite;
+    display: inline-block; 
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+}
+
+/* affirmation = "Amazing */
+.aff-amazing {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* affirmation = "Cute" */
+.aff-cute {
+    font-family: 'Cute Font', sans-serif;
+    color: pink;
+}
+
+/* three in one */
+#three-in-one {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 50%; /* Use top instead of bottom for vertical centering */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center;
+}
+
+  
+  #flip {
+    height:50px;
+    overflow:hidden;
+  }
+  
+  #flip > div > div {
+    color:#fff;
+    padding:4px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 5s linear infinite;
+  }
+  
+  #flip div div {
+    background:#42c58a;
+  }
+  #flip div:first-child div {
+    background:#4ec7f3;
+  }
+  #flip div:last-child div {
+    background:#DC143C;
+  }
+  
+  @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+
+/* final */
+#Final {
+    color: #000;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+#Final span:nth-child(1) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#Final span:nth-child(2) {
+    font-size: 16px;
+    display: block;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+#Final span:nth-child(3) {
+    font-size: 16px;
+    opacity: 0.1;
+}
